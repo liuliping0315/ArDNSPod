@@ -21,6 +21,10 @@
 
 #################################################
 
+# solve crond (crontab) " ip: command not found" problem in CentOS7
+# the ip command is in /sbin or /usr/sbin, and which are not in default PATH of CROND
+export PATH=${PATH}:/usr/sbin:/sbin
+
 #Please select IP type
 IPtype=1  #1.WAN 2.LAN 3.IPv6 4.Local-WAN
 #---------------------
